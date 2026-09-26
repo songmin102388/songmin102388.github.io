@@ -24,14 +24,13 @@
     <button id="theme-toggle" class="theme-btn" aria-label="테마 전환">🌙</button>
   </nav>
 
-  <!-- ========== Hero ========== -->
+  <!-- ========== Hero (그대로 유지) ========== -->
   <header class="hero">
     <h1 class="hero-name">LEE SONGMIN</h1>
     <div class="hero-typing">
-      <!-- ✏️ 아래 문구를 원하는 한 문장으로 수정하세요 (JS에서 수정) -->
+      <!-- ✏️ 문구 수정은 맨 아래 <script>의 segments 배열에서 -->
       <span id="typed"></span><span class="cursor"></span>
     </div>
-    <!-- 히어로 연락 버튼 -->
     <div class="hero-buttons">
       <a href="mailto:songmin1023@icloud.com" class="hero-btn">✉&nbsp;&nbsp;songmin1023@icloud.com</a>
       <a href="https://github.com/songmin102388" target="_blank" class="hero-btn">GitHub&nbsp;&nbsp;→</a>
@@ -39,351 +38,232 @@
     <div class="scroll-indicator">아래로 스크롤</div>
   </header>
 
-  <hr class="section-divider" />
+  <!-- ==================================================================
+       문서 영역 — Notion 스타일 2단 레이아웃
+       왼쪽 = 섹션 라벨 / 오른쪽 = 항목들
+       ================================================================== -->
+  <main class="doc">
 
-  <!-- ========== About ========== -->
-  <section id="about" class="reveal">
-    <h2 class="section-title">소개</h2>
-    <div class="about-grid">
-      <div class="about-image">
-        <img src="images/라즈이노_이송민.JPG" alt="프로필 사진" />
+    <!-- ========== 소개 (문서 헤더) ========== -->
+    <section id="about" class="doc-intro reveal">
+      <img class="doc-avatar" src="images/송민.png" alt="이송민 프로필 사진" />
+      <h2 class="doc-title">Lee Songmin’s Portfolio</h2>
+
+      <div class="intro-grid">
+        <blockquote class="intro-quote">
+          <strong>I am Songmin Lee,<br />a Backend &amp; Infra Developer.</strong>
+          <span>
+            Spring Boot로 견고한 서비스를 만들고, AI 에이전트가 안정적으로 동작하는
+            인프라 환경을 설계하는 개발자입니다. 흩어진 도구와 시스템을 하나의 신뢰할 수 있는
+            흐름으로 엮어내는 것을 목표로 하고 있습니다.
+          </span>
+        </blockquote>
+
+        <ul class="intro-facts">
+          <li><strong>Name:</strong> 이송민 Lee Songmin</li>
+          <li><strong>School:</strong> 경북소프트웨어마이스터고</li>
+          <li><strong>Email:</strong> <a href="mailto:songmin1023@icloud.com">songmin1023@icloud.com</a></li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/songmin102388" target="_blank">songmin102388</a></li>
+          <!-- ✏️ 전화번호를 공개하려면 아래 줄의 주석을 푸세요
+          <li><strong>Contact:</strong> 010-0000-0000</li>
+          -->
+        </ul>
       </div>
-      <div class="about-text">
-        <p>
-          <strong>안녕하세요, 백엔드 & 인프라를 지향하는 개발자 이송민입니다.</strong>
-        </p>
-        <p>
-          Spring Boot로 견고한 서비스를 만들고, AI 에이전트가 안정적으로 동작하는
-          인프라 환경 설계에 관심이 많습니다. 경북소프트웨어마이스터고에서 다양한 프로젝트를
-          경험하며 구조와 흐름을 이해하는 개발자로 성장하고 있습니다.
-        </p>
-        <p>
-          단순히 코드를 짜는 것이 아닌, 흩어진 도구와 시스템을 하나의 신뢰할 수 있는
-          흐름으로 엮어내는 개발자가 되는 것이 목표입니다.
-        </p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <hr class="section-divider" />
+    <hr class="doc-rule" />
 
-  <!-- ========== Skills ========== -->
-  <section id="skills" class="reveal">
-    <h2 class="section-title">기술</h2>
-    <div class="skills-section">
-
-      <!-- 언어 / 프레임워크 -->
-      <div class="skill-group">
-        <div class="skill-group-label">언어 / 프레임워크</div>
-        <div class="skill-icons-grid">
-
-          <div class="skill-icon-card">
-            <img src="https://cdn.simpleicons.org/c/A8B9CC" alt="C" />
-            <span>C</span>
-          </div>
-          <div class="skill-icon-card">
-            <img src="images/python.png" alt="Python" />
-            <span>Python</span>
-          </div>
-          <div class="skill-icon-card">
-            <img src="images/java.png" alt="Java" class="img-bg" />
-            <span>Java</span>
-          </div>
-          <div class="skill-icon-card">
-            <img src="https://cdn.simpleicons.org/spring" alt="Spring" />
-            <span>Spring</span>
-          </div>
-          <div class="skill-icon-card">
-            <img src="https://cdn.simpleicons.org/flask/000000" alt="Flask" class="icon-dark-invert" />
-            <span>Flask</span>
-          </div>
-          <div class="skill-icon-card">
-            <img src="images/express.png" alt="Express.js" class="img-bg icon-dark-invert" />
-            <span>Express.js</span>
-          </div>
-
-        </div>
+    <!-- ========== 기술 ========== -->
+    <section id="skills" class="doc-row reveal">
+      <div class="row-label">
+        <h2><em>Skills</em> 기술</h2>
+        <p>Tech Stack</p>
       </div>
 
-      <!-- 개발 툴 / 기타 -->
-      <div class="skill-group">
-        <div class="skill-group-label">개발 툴 / 기타</div>
-        <div class="skill-icons-grid">
-
-          <div class="skill-icon-card">
-            <img src="https://cdn.simpleicons.org/github/000000" alt="GitHub" class="icon-dark-invert" />
-            <span>GitHub</span>
+      <div class="row-body">
+        <!-- ✏️ 아이콘 추가: 아래 한 줄을 복사하세요. title = 마우스 올렸을 때 뜨는 이름
+             CDN 아이콘 주소 형식 → https://cdn.simpleicons.org/{이름}/{색상코드} -->
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">언어 / 프레임워크</span>
           </div>
-          <div class="skill-icon-card">
-            <img src="https://cdn.simpleicons.org/docker" alt="Docker" />
-            <span>Docker</span>
+          <div class="icon-row">
+            <span class="icon-tile" title="Python"><img src="images/icons/python.png" alt="Python" /></span>
+            <span class="icon-tile" title="Java"><img src="images/icons/java.png" alt="Java" /></span>
+            <span class="icon-tile" title="Spring Boot"><img src="https://cdn.simpleicons.org/spring" alt="Spring Boot" /></span>
+            <span class="icon-tile" title="Flask"><img src="https://cdn.simpleicons.org/flask" alt="Flask" /></span>
+            <span class="icon-tile" title="Node.js"><img src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js" /></span>
+            <span class="icon-tile" title="React"><img src="https://cdn.simpleicons.org/react" alt="React" /></span>
           </div>
-          <div class="skill-icon-card">
-            <img src="images/aws.png" alt="AWS" class="img-bg" />
-            <span>AWS</span>
-          </div>
-          <div class="skill-icon-card">
-            <img src="images/vscode.png" alt="VSCode" class="img-bg" />
-            <span>VSCode</span>
-          </div>
-          <div class="skill-icon-card">
-            <img src="images/intellij.png" alt="IntelliJ IDEA" />
-            <span>IntelliJ</span>
-          </div>
-          <div class="skill-icon-card">
-            <img src="https://cdn.simpleicons.org/raspberrypi" alt="Raspberry Pi" />
-            <span>Raspberry Pi</span>
-          </div>
-
         </div>
-      </div>
 
-    </div>
-  </section>
-
-  <hr class="section-divider" />
-
-  <!-- ========== Experience ========== -->
-  <section id="experience" class="reveal">
-    <h2 class="section-title">경험</h2>
-    <div class="experience-list">
-
-      <!-- ✏️ 아래 블록을 복사해서 경험을 추가하세요 -->
-      <div class="experience-item">
-        <div class="experience-period">
-          <!-- 예: 2025.03 — 현재 -->
-        </div>
-        <div class="experience-content">
-          <h3 class="experience-title"><!-- 예: 경북소프트웨어마이스터고 재학 --></h3>
-          <div class="experience-org"><!-- 예: 경북소프트웨어마이스터고등학교 --></div>
-          <p class="experience-desc">
-            <!-- 예: 소프트웨어 개발 전공, 백엔드 및 인프라 분야 집중 학습. 팀 프로젝트 다수 참여. -->
-          </p>
-        </div>
-      </div>
-
-      <div class="experience-item">
-        <div class="experience-period">
-          <!-- 예: 2025.xx — 2025.xx -->
-        </div>
-        <div class="experience-content">
-          <h3 class="experience-title"><!-- 예: 팀 프로젝트명 / 활동명 --></h3>
-          <div class="experience-org"><!-- 예: 소속 또는 주최 기관 --></div>
-          <p class="experience-desc">
-            <!-- 예: 어떤 역할을 담당했는지, 무엇을 배웠는지 한두 줄로 작성하세요. -->
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <hr class="section-divider" />
-
-  <!-- ========== Awards ========== -->
-  <section id="awards" class="reveal">
-    <h2 class="section-title">수상</h2>
-    <div class="awards-list">
-
-      <!-- ✏️ 아래 블록을 복사해서 수상을 추가하세요 -->
-      <div class="awards-group">
-        <div class="awards-group-label">교외</div>
-        <div class="award-item">
-          <div class="award-year"><!-- 예: 2025 --></div>
-          <div class="award-content">
-            <h3 class="award-title"><!-- 예: 한국코드페어 본선 진출 --></h3>
-            <div class="award-org"><!-- 예: 한국과학창의재단 — 라즈이노 프로젝트 --></div>
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">개발 툴 / 기타</span>
           </div>
-          <div class="award-badge">🏆</div>
-        </div>
-        <div class="award-item">
-          <div class="award-year"><!-- 예: 2024 --></div>
-          <div class="award-content">
-            <h3 class="award-title"><!-- 예: 달빛연합 SW융합 해커톤 인기상 --></h3>
-            <div class="award-org"><!-- 예: 주최 기관 --></div>
-          </div>
-          <div class="award-badge">🥇</div>
-        </div>
-      </div>
-
-      <div class="awards-group">
-        <div class="awards-group-label">교내</div>
-        <div class="award-item">
-          <div class="award-year"><!-- 예: 2025 --></div>
-          <div class="award-content">
-            <h3 class="award-title"><!-- 예: 프로그래밍 챌린지 은상 --></h3>
-            <div class="award-org"><!-- 예: 경북소프트웨어마이스터고 --></div>
-          </div>
-          <div class="award-badge">🥈</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <hr class="section-divider" />
-
-  <!-- ========== Projects ========== -->
-  <section id="projects" class="reveal">
-    <h2 class="section-title">프로젝트
-      
-    </h2>
-    <div class="projects-list">
-
-      <!-- ✏️ ▼ 화살표 클릭 시 상세 내용이 펼쳐집니다. 아래 카드를 복사해서 추가하세요 -->
-
-      <!-- 프로젝트 01 -->
-      <div class="project-card">
-        <div class="project-header">
-          <div class="project-main">
-            <div class="project-number">프로젝트 01</div>
-            <h3 class="project-title"><!-- 예: 라즈이노 (Razino) --></h3>
-            <p class="project-summary"><!-- 예: WebRTC와 라즈베리파이를 활용한 IoT 기반 독거노인 케어 시스템 --></p>
-            <div class="project-tags">
-              <span><!-- 예: Spring Boot --></span>
-              <span><!-- 예: WebRTC --></span>
-              <span><!-- 예: Raspberry Pi --></span>
-            </div>
-          </div>
-          <button class="project-toggle" aria-label="상세 보기">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-        </div>
-        <div class="project-detail">
-          <div class="project-detail-inner">
-            <div class="project-image">
-              <!-- <img src="images/프로젝트이미지.png" alt="프로젝트명" /> -->
-              <div class="project-image-placeholder">프로젝트 이미지</div>
-            </div>
-            <div class="project-detail-content">
-              <div class="detail-block">
-                <h4>개요</h4>
-                <p><!-- 예: 독거노인의 안전을 실시간으로 모니터링하는 IoT 기반 케어 시스템입니다. --></p>
-              </div>
-              <div class="detail-block">
-                <h4>기술 스택</h4>
-                <div class="detail-tags">
-                  <span><!-- 예: Spring Boot --></span>
-                  <span><!-- 예: WebRTC --></span>
-                  <span><!-- 예: MySQL --></span>
-                  <span><!-- 예: Raspberry Pi --></span>
-                </div>
-              </div>
-              <div class="detail-block">
-                <h4>성과 & 배운 점</h4>
-                <p><!-- 예: 한국코드페어 본선 진출. WebRTC 스트리밍 안정성 최적화 경험. --></p>
-              </div>
-              <div class="project-links">
-                <a href="<!-- GitHub 주소 -->" target="_blank">GitHub →</a>
-                <a href="<!-- 데모 주소 (없으면 삭제) -->" target="_blank">데모 보기 →</a>
-              </div>
-            </div>
+          <div class="icon-row">
+            <span class="icon-tile" title="GitHub"><img src="https://cdn.simpleicons.org/github" alt="GitHub" /></span>
+            <span class="icon-tile" title="Docker"><img src="https://cdn.simpleicons.org/docker" alt="Docker" /></span>
+            <span class="icon-tile" title="AWS"><img src="images/icons/aws.png" alt="AWS" /></span>
+            <span class="icon-tile" title="VSCode"><img src="images/icons/vscode.png" alt="Visual Studio Code" /></span>
+            <span class="icon-tile" title="IntelliJ IDEA"><img src="images/icons/intellij.png" alt="IntelliJ IDEA" /></span>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- 프로젝트 02 -->
-      <div class="project-card">
-        <div class="project-header">
-          <div class="project-main">
-            <div class="project-number">프로젝트 02</div>
-            <h3 class="project-title"><!-- 프로젝트 제목 --></h3>
-            <p class="project-summary"><!-- 한두 줄 간단 설명 --></p>
-            <div class="project-tags">
-              <span><!-- 기술1 --></span>
-              <span><!-- 기술2 --></span>
-            </div>
-          </div>
-          <button class="project-toggle" aria-label="상세 보기">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-        </div>
-        <div class="project-detail">
-          <div class="project-detail-inner">
-            <div class="project-image">
-              <div class="project-image-placeholder">프로젝트 이미지</div>
-            </div>
-            <div class="project-detail-content">
-              <div class="detail-block"><h4>개요</h4><p><!-- 상세 설명 --></p></div>
-              <div class="detail-block">
-                <h4>기술 스택</h4>
-                <div class="detail-tags"><span><!-- 기술1 --></span><span><!-- 기술2 --></span></div>
-              </div>
-              <div class="detail-block"><h4>성과 & 배운 점</h4><p><!-- 성과 및 느낀점 --></p></div>
-              <div class="project-links"><a href="<!-- GitHub 주소 -->" target="_blank">GitHub →</a></div>
-            </div>
-          </div>
-        </div>
+    <hr class="doc-rule" />
+
+    <!-- ========== 경험 ========== -->
+    <section id="experience" class="doc-row reveal">
+      <div class="row-label">
+        <h2><em>Experience</em> 경력</h2>
+        <p>Career History</p>
       </div>
 
-      <!-- 프로젝트 03 -->
-      <div class="project-card">
-        <div class="project-header">
-          <div class="project-main">
-            <div class="project-number">프로젝트 03</div>
-            <h3 class="project-title"><!-- 프로젝트 제목 --></h3>
-            <p class="project-summary"><!-- 한두 줄 간단 설명 --></p>
-            <div class="project-tags">
-              <span><!-- 기술1 --></span>
-              <span><!-- 기술2 --></span>
-            </div>
+      <div class="row-body">
+
+        <!-- ✏️ 아래 .entry 블록을 복사해서 항목을 추가하세요 -->
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">소속 / 활동명</span>
+            <span class="entry-meta">역할 <span class="entry-date">(2025.03 ~ Present)</span></span>
           </div>
-          <button class="project-toggle" aria-label="상세 보기">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
+          <ul class="entry-list">
+            <li>어떤 일을 맡았는지 한 줄로 적으세요</li>
+            <li>무엇을 만들었고 무엇을 배웠는지 적으세요</li>
+          </ul>
         </div>
-        <div class="project-detail">
-          <div class="project-detail-inner">
-            <div class="project-image">
-              <div class="project-image-placeholder">프로젝트 이미지</div>
-            </div>
-            <div class="project-detail-content">
-              <div class="detail-block"><h4>개요</h4><p><!-- 상세 설명 --></p></div>
-              <div class="detail-block">
-                <h4>기술 스택</h4>
-                <div class="detail-tags"><span><!-- 기술1 --></span><span><!-- 기술2 --></span></div>
-              </div>
-              <div class="detail-block"><h4>성과 & 배운 점</h4><p><!-- 성과 및 느낀점 --></p></div>
-              <div class="project-links"><a href="<!-- GitHub 주소 -->" target="_blank">GitHub →</a></div>
-            </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">소속 / 활동명</span>
+            <span class="entry-meta">역할 <span class="entry-date">(2024.07 ~ 2025.02)</span></span>
+          </div>
+          <ul class="entry-list">
+            <li>설명을 입력하세요</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="doc-rule" />
+
+    <!-- ========== 수상 ========== -->
+    <section id="awards" class="doc-row reveal">
+      <div class="row-label">
+        <h2><em>Award</em> 수상</h2>
+        <p>Contest, Competition</p>
+      </div>
+
+      <div class="row-body">
+
+        <!-- ✏️ 아래 .entry 블록을 복사해서 항목을 추가하세요 -->
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">2025 대회명 / 수상명 [상 종류]</span>
+            <span class="entry-meta">주최 기관 <span class="entry-date">(Dec 2025)</span></span>
+          </div>
+
+          <!-- 대회 설명이 필요할 때만 사용 (필요 없으면 삭제) -->
+          <div class="callout">
+            <span class="callout-icon">❓</span>
+            <p>이 상이 어떤 상인지, 어떤 기준으로 선정되는지 한두 줄로 적으세요.</p>
+          </div>
+
+          <!-- 수상 사진이 있을 때만 사용 (필요 없으면 삭제)
+          <div class="entry-images">
+            <img src="images/상장사진.jpg" alt="" />
+            <img src="images/시상식사진.jpg" alt="" />
+          </div>
+          -->
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">2024 대회명 / 수상명</span>
+            <span class="entry-meta">주최 기관 <span class="entry-date">(Nov 2024)</span></span>
           </div>
         </div>
+
+      </div>
+    </section>
+
+    <hr class="doc-rule" />
+
+    <!-- ========== 프로젝트 ========== -->
+    <section id="projects" class="doc-row reveal">
+      <div class="row-label">
+        <h2><em>Projects</em> 프로젝트</h2>
+        <p>Side &amp; Team Projects</p>
       </div>
 
-    </div>
-  </section>
+      <div class="row-body">
 
-  <hr class="section-divider" />
+        <!-- ✏️ 아래 .entry 블록을 복사해서 항목을 추가하세요 -->
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">프로젝트명</span>
+            <span class="entry-meta">한 줄 소개 <span class="entry-date">(2025.03 ~ 2025.06)</span></span>
+          </div>
+          <ul class="entry-list">
+            <li>어떤 문제를 풀었는지 적으세요</li>
+            <li>맡은 역할과 성과를 적으세요</li>
+          </ul>
+          <div class="chip-list">
+            <span class="chip">Spring Boot</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">Docker</span>
+          </div>
+          <div class="entry-links">
+            <a href="#" target="_blank">GitHub →</a>
+          </div>
+        </div>
 
-  <!-- ========== Contact ========== -->
-  <section id="contact" class="contact reveal">
-    <h2 class="contact-title">Contact</h2>
-    <p class="contact-desc">언제든지 연락 주세요. 항상 모든 일에 최선을 다하고 효율적으로 일을 실행하겠습니다. </p>
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">프로젝트명</span>
+            <span class="entry-meta">한 줄 소개 <span class="entry-date">(2024.09 ~ 2024.12)</span></span>
+          </div>
+          <ul class="entry-list">
+            <li>설명을 입력하세요</li>
+          </ul>
+        </div>
 
-    <!-- 주소 직접 표기 -->
-    <div class="contact-address">
-      <div class="contact-address-item">
-        <span class="address-label">이메일</span>
-        <span class="address-value">songmin1023@icloud.com</span>
       </div>
-      <div class="contact-address-item">
-        <span class="address-label">GitHub</span>
-        <span class="address-value">https://github.com/songmin102388</span>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  
+    <hr class="doc-rule" />
+
+    <!-- ========== 연락 ========== -->
+    <section id="contact" class="doc-row reveal">
+      <div class="row-label">
+        <h2><em>Contact</em> 연락</h2>
+        <p>Get in touch</p>
+      </div>
+
+      <div class="row-body">
+        <div class="entry">
+          <p class="entry-text">언제든지 연락 주세요. 항상 모든 일에 최선을 다하고 효율적으로 일을 실행하겠습니다.</p>
+          <ul class="intro-facts">
+            <li><strong>Email:</strong> <a href="mailto:songmin1023@icloud.com">songmin1023@icloud.com</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/songmin102388" target="_blank">github.com/songmin102388</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="doc-footer">
+    <span>© 2026 Lee Songmin</span>
+  </footer>
+
   <script>
     /* =====================
-       자막 타이핑 (한 문장, 한 번만)
-       ✏️ phrase 값을 원하는 문장으로 수정하세요
+       히어로 자막 타이핑
+       ✏️ segments 배열을 수정하면 문장이 바뀝니다 (hl: true = 강조색)
        ===================== */
     const typedEl = document.getElementById("typed");
     const segments = [
@@ -424,7 +304,7 @@
        ===================== */
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.08 });
     document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
     /* =====================
@@ -440,19 +320,6 @@
       const isDark = document.body.classList.contains("dark");
       themeBtn.textContent = isDark ? "☀️" : "🌙";
       localStorage.setItem("theme", isDark ? "dark" : "light");
-    });
-
-    /* =====================
-       프로젝트 토글 (화살표)
-       ===================== */
-    document.querySelectorAll(".project-toggle").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const card = btn.closest(".project-card");
-        const detail = card.querySelector(".project-detail");
-        const isOpen = card.classList.contains("open");
-        card.classList.toggle("open");
-        detail.style.maxHeight = isOpen ? "0" : detail.scrollHeight + "px";
-      });
     });
   </script>
 
